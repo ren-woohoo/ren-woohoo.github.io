@@ -1,8 +1,6 @@
 menu:
-  首页: /
-  归档: /archives
-  游记: /
-  作者: /
+  Home: /
+  Archives: /archives
 
 widgets:
 - search
