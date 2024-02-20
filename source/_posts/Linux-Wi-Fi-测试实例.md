@@ -1,7 +1,9 @@
 ---
 title: Linux Wi-Fi 测试实例
 date: 2019-04-10 14:15:27
-tags: Linux Wi-Fi
+tags:
+    - Linux
+    - Wi-Fi
 ---
 
 在 Linux 下面，我们经常会用到 Wi-Fi 模块，当我们在系统配置好 Wi-Fi 之后，需要通过命令行来测试 Wi-Fi 模块工作是否正常。
@@ -14,17 +16,11 @@ tags: Linux Wi-Fi
 $ ifconfig wlan0 up
 
 $ ifconfig wlan0
-
 wlan0 Link encap:Ethernet HWaddr 58:2D:34:00:2E:6C
-
 UP BROADCAST MULTICAST MTU:1500 Metric:1
-
 RX packets:0 errors:0 dropped:0 overruns:0 frame:0
-
 TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
-
 collisions:0 txqueuelen:1000
-
 RX bytes:0 (0.0 B) TX bytes:0 (0.0 B)
 ```
 
@@ -42,7 +38,6 @@ $ echo ctrl_interface=/var/run/wpa_supplicant > /etc/wpa_supplicant.conf
 
 ```shell
 $ wpa_supplicant -B -i wlan0 -Dnl80211 -c /etc/wpa_supplicant.conf
-
 Successfully initialized wpa_supplicant
 ```
 
@@ -54,15 +49,10 @@ Successfully initialized wpa_supplicant
 
 ```shell
 $ wpa_cli -p /var/run/wpa_supplicant
-
 wpa_cli v2.5
-
 Copyright (c) 2004-2015, Jouni Malinen <j@w1.fi> and contributors
-
 This software may be distributed under the terms of the BSD license.
-
 See README for more details.
-
 Interactive mode
 
 \>
