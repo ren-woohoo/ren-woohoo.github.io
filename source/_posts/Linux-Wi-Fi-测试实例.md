@@ -10,7 +10,7 @@ tags:
 
 ## STA 工作模式
 
-### 打开 Wi-Fi
+### 1. 打开 Wi-Fi
 
 ```shell
 $ ifconfig wlan0 up
@@ -26,7 +26,7 @@ RX bytes:0 (0.0 B) TX bytes:0 (0.0 B)
 
 如上图此时的模块加载正常。
 
-### 运行 wpa_supplicant 服务
+### 2. 运行 wpa_supplicant 服务
 
 初始化配置 wpa_suppclicant.conf 文件，这一步的主要目的是为了配置 sockets 接口路径 ctrl_interface，wpa_cli 需要与 wpa_supplicant 进行 socket 通信。
 
@@ -43,7 +43,7 @@ Successfully initialized wpa_supplicant
 
 此时 wpa_supplicant 已成功运行。
 
-### 运行 wpa_cli
+### 3. 运行 wpa_cli
 
 默认路径 sockets 接口路径就是 /var/run/wpa_supplicant，如果需要修改路径，可以通过参数 -p <path> 修改：
 
@@ -60,7 +60,7 @@ Interactive mode
 
 ***<u>注意：wpa_cli 如果无法成功运行，请确定 sockets 接口文件是否异常</u>***
 
-### 连接 Wi-Fi
+### 4. 连接 Wi-Fi
 
 这一步完全是在 wpa_cli 命令窗口执行的。
 
@@ -109,9 +109,9 @@ Interactive mode
     <3>CTRL-EVENT-CONNECTED - Connection to 18:31:bf:47:02:80 completed [id=0 id_str=]
 
     \> quit
-```
+    ```
 
-### udhcpc 获取动态 IP
+### 5. udhcpc 获取动态 IP
 
 上一步已经成功连接 Wi-Fi，但是此时网络仍然是无法连接的，主要是因为没有获取到有效的动态 IP 地址，在路由器配置为 DHCP 的情况下，设备端可以通过 udhcpc（或者 dhclient）获取动态 IP，如下：
 
@@ -136,7 +136,6 @@ collisions:0 txqueuelen:1000
 RX bytes:254033222 (242.2 MiB) TX bytes:45160618 (43.0 MiB)
 
 $ ping -c 4 www.baidu.com
-
 PING www.baidu.com (180.97.33.108): 56 data bytes
 64 bytes from 180.97.33.108: seq=0 ttl=56 time=10.074 ms
 64 bytes from 180.97.33.108: seq=1 ttl=56 time=8.514 ms
@@ -148,6 +147,4 @@ PING www.baidu.com (180.97.33.108): 56 data bytes
 round-trip min/avg/max = 8.514/22.530/46.697 ms
 ```
 
- Wi-Fi STA 模式联网测试结束。
-
-done.
+此时 Wi-Fi STA 模式联网测试结束。
