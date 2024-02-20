@@ -66,50 +66,50 @@ Interactive mode
 
 1. 扫描当前环境 Wi-Fi 列表
 
-    ```shell
-    > scan
-    OK
+```shell
+> scan
+OK
 
-    \> scan_results
-    bssid / frequency / signal level / flags / ssid
-    40:31:3c:16:c6:b8 2472 -43 [WPA-PSK-CCMP+TKIP][WPA2-PSK-CCMP+TKIP][WPS][ESS] AAC@NET_Test
-    18:31:bf:47:02:80 2437 -41 [WPA2-PSK-CCMP][ESS] Cleargrass_SZ
-    a4:c6:4f:42:fd:cc 2442 -50 [WPA-PSK-CCMP+TKIP][WPA2-PSK-CCMP+TKIP][WPS][ESS] CU_udXA
-    ```
+\> scan_results
+bssid / frequency / signal level / flags / ssid
+40:31:3c:16:c6:b8 2472 -43 [WPA-PSK-CCMP+TKIP][WPA2-PSK-CCMP+TKIP][WPS][ESS] AAC@NET_Test
+18:31:bf:47:02:80 2437 -41 [WPA2-PSK-CCMP][ESS] Cleargrass_SZ
+a4:c6:4f:42:fd:cc 2442 -50 [WPA-PSK-CCMP+TKIP][WPA2-PSK-CCMP+TKIP][WPS][ESS] CU_udXA
+```
 
 2. 选择一个测试所用 Wi-Fi
 
-    我们选用 "Cleargrass_SZ" 为我们所需要的 Wi-Fi，此时 Wi-Fi 信息如下：
+我们选用 "Cleargrass_SZ" 为我们所需要的 Wi-Fi，此时 Wi-Fi 信息如下：
 
-    | 参数名   | 数值          |
-    | :------- | ------------- |
-    | ssid     | Cleargrass_SZ |
-    | psk      | 12345678      |
-    | key_mgmt | WPA-PSK       |
+| 参数名   | 数值          |
+| :------- | ------------- |
+| ssid     | Cleargrass_SZ |
+| psk      | 12345678      |
+| key_mgmt | WPA-PSK       |
 
-    ```shell
-    > add_network
-    0
+```shell
+> add_network
+0
 
-    \> set_network 0 ssid "Cleargrass_SZ"
-    OK
+\> set_network 0 ssid "Cleargrass_SZ"
+OK
 
-    \> set_network 0 key_mgmt WPA-PSK
-    OK
+\> set_network 0 key_mgmt WPA-PSK
+OK
 
-    \> set_network 0 psk "12345678"
-    OK
+\> set_network 0 psk "12345678"
+OK
 
-    \> select_network 0
-    OK
-    <3>WPS-AP-AVAILABLE
-    <3>Trying to associate with 18:31:bf:47:02:80 (SSID='Cleargrass_SZ' freq=2437 MHz)
-    <3>Associated with 18:31:bf:47:02:80
-    <3>WPA: Key negotiation completed with 18:31:bf:47:02:80 [PTK=CCMP GTK=CCMP]
-    <3>CTRL-EVENT-CONNECTED - Connection to 18:31:bf:47:02:80 completed [id=0 id_str=]
+\> select_network 0
+OK
+<3>WPS-AP-AVAILABLE
+<3>Trying to associate with 18:31:bf:47:02:80 (SSID='Cleargrass_SZ' freq=2437 MHz)
+<3>Associated with 18:31:bf:47:02:80
+<3>WPA: Key negotiation completed with 18:31:bf:47:02:80 [PTK=CCMP GTK=CCMP]
+<3>CTRL-EVENT-CONNECTED - Connection to 18:31:bf:47:02:80 completed [id=0 id_str=]
 
-    \> quit
-    ```
+\> quit
+```
 
 ### 5. udhcpc 获取动态 IP
 
