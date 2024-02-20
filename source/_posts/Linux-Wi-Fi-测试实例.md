@@ -1,6 +1,9 @@
 ---
 title: Linux Wi-Fi 测试实例
 date: 2019-04-10 14:15:27
+categories:
+    - 技术
+        - 嵌入式
 tags:
     - Linux
     - Wi-Fi
