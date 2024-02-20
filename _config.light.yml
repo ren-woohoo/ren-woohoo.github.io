@@ -1,11 +1,14 @@
 menu:
-  Home:
-  Archives: archives
+  首页: /
+  归档: /archives
+  游记: /
+  作者: /
 
 widgets:
 - search
 - category
 - tag
+- twitter
 
 excerpt_link: Read More
 
