@@ -5,8 +5,7 @@ categories:
     - 技术
         - 嵌入式
 tags:
-    - Linux
-    - Wi-Fi
+    - linux
 ---
 
 在 Linux 下面，我们经常会用到 Wi-Fi 模块，当我们在系统配置好 Wi-Fi 之后，需要通过命令行来测试 Wi-Fi 模块工作是否正常。

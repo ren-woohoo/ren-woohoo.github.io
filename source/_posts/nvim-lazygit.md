@@ -1,8 +1,8 @@
 ---
-title: nvim 中 lazygit 的使用
+title: neovim 插件 lazygit
 date: 2024-03-05 15:16:09
 categories:
-    - 开发环境
+    - 环境
         - nvim
 tags:
     - nvim
@@ -32,7 +32,7 @@ $ lazygit --version
 ```bash
 $ brew install lazygit
 ```
-> 如果 brew 使用的国内的源，有可能会导致安装时出错
+*** 如果 brew 使用的国内的源，有可能会导致安装时出错 ***
 
 
 #### ubuntu/debian apt-get 安装
@@ -67,7 +67,7 @@ use({
 })
 ```
 
-> 这里的 `config` 是我自定义的配置文件，用于管理 `lazygit.nvim` 的个性化配置;
+*** 这里的 `config` 是我自定义的配置文件，用于管理 `lazygit.nvim` 的个性化配置; ***
 
 #### 2. 配置 `lazygit.nvim` 插件
 
