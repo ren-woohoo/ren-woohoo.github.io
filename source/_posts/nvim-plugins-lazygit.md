@@ -1,9 +1,9 @@
 ---
-title: neovim 插件之 lazygit
+title: nvim 插件之 lazygit
 date: 2024-03-05 15:16:09
 categories:
     - 环境
-    - nvim
+        - nvim
 tags:
     - nvim
     - git
